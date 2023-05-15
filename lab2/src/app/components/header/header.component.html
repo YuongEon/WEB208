@@ -2,13 +2,13 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid position-relative">
       <a class="navbar-brand position-absolute" href="#">
-        <img src="../../../assets/image/angular_logo_icon_169595.png" alt="" width="40" height="100%">
+        <img [src]="imageUrl" alt="" width="40" height="100%">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarNav">
-        <p class="fs-3 text-light title">Employee Management System</p>
+        <p class="fs-3 text-light title">{{title}}</p>
       </div>
     </div>
   </nav>

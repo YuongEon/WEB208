@@ -1,0 +1,9 @@
+<div class="row g-0 mt-3 p-2">
+  <div class="col-4 offset-8 d-flex align-items-end flex-column">
+  <form class="col-12 d-flex" (ngSubmit)="search()">
+  <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="inputValue" name="inputValue">
+  <button class="btn btn-outline-primary" type="submit">Search</button>
+  </form>
+  </div>
+  <h4 class="col-12"><span class="text-black-50">Filter by:</span> {{filterValue}}</h4>
+  </div>

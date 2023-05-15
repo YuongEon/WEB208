@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
+  @Input() title: string = '';
+  imageUrl : string | null = null
+  constructor(){
+    this.imageUrl = 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
+  }
 }
