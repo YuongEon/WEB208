@@ -1,0 +1,23 @@
+<form class="d-flex">
+  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="keyword" name="keyword" (ngModelChange)="search($event)">
+</form>
+<p *ngIf="mess">{{mess}}</p>
+<ng-container *ngIf="data && data.length > 0"; else listItem>
+  <div class="row">
+    <div class="col-3" *ngFor="let item of dataFilter">
+    <div class="card" style="width: 18rem">
+      <img src={{item.imgUrl}} class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text">
+          {{item.price}}
+        </p>
+        <a [routerLink]="'/product/'+item.id" class="btn btn-primary">More</a>
+      </div>
+    </div>
+  </div>
+  </div>
+</ng-container>
+<ng-template #listItem>
+  <p>khong co san pham nao</p>
+</ng-template>

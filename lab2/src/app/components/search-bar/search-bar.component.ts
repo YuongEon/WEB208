@@ -1,3 +1,4 @@
+import { UpperCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,9 +11,13 @@ export class SearchBarComponent {
   filterValue : string  = '';
 
   search(){
-    this.filterValue = this.inputValue
+    this.filterValue =  this.inputValue
     this.inputValue = ''
   }
   
+  onHandleChange(newValue :string){
+    console.log(newValue);
+    this.filterValue = newValue
+  }
   
 }

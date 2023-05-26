@@ -1,0 +1,17 @@
+.container{
+  height: auto;
+  div{
+    display: grid;
+    place-items: center;
+    height: initial;
+    p{
+      text-align: center;
+      color: #333333;
+      font-size: 3rem;
+      &:first-child{
+        color: red;
+        font-size: 6rem;
+      }
+    }
+  }
+}

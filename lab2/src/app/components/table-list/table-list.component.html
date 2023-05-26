@@ -1,0 +1,30 @@
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Full name</th>
+        <th scope="col">phoneNumber</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Company</th>
+        <th scope="col">Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let item of data">
+        <tr>
+          <td>{{item.id}}</td>
+          <td>{{item.firstName}}</td>
+          <td>{{item.lastName}}</td>
+          <td>{{item.firstName + ' ' + item.lastName}}</td>
+          <td>{{item.phoneNumber}}</td>
+          <td>{{item.gender}}</td>
+          <td>{{item.company}}</td>
+          <td>{{(item.salary | currency:' ':'symbol':'0.0-1')  + ' VND'}}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
